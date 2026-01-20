@@ -18,7 +18,6 @@ export const titleFetch = async (payload: any) => {
     obj_User: {
       AccountNo: payload.AccountNo,
       AgentId: payload.AgentId,
-      Amount: payload.Amount || 0,
       BankCode: payload.BankCode,
       TieUpCode: payload.TieUpCode,
       UserId: payload.UserId,
