@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { addTransactionInQueue } from "../services/addTransactionInQueue.js";
+import { addTransactionInQueueService } from "../services/addTransactionInQueue.js";
 
 const QUEUE_THRESHOLD = 3_000_000;
 
@@ -26,7 +26,7 @@ export const handleAddTransactionInQueue = async (req: Request, res: Response) =
     }
 
     // Call SOAP API
-    const result = await addTransactionInQueue(payload);
+    const result = await addTransactionInQueueService(payload);
     res.json(result);
 
   } catch (err: any) {
